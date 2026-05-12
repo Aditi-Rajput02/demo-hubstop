@@ -1,0 +1,265 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.crm-wrap {
+  padding: 1rem 0;
+  font-size: 14px;
+  color: #1a1a1a;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Phase tabs ── */
+.phase-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.ptab {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 0.5px solid #d1d5db;
+  background: #f9fafb;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.ptab:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.ptab.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+/* ── Progress ── */
+.progress-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  height: 4px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+/* ── Phase card ── */
+.phase-card {
+  background: #ffffff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid #e5e7eb;
+}
+
+.phase-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.phase-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  text-transform: capitalize;
+}
+
+.phase-goal {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* ── Steps ── */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: background 0.15s;
+  border: 0.5px solid transparent;
+  text-align: left;
+}
+
+.step:hover {
+  border-color: #d1d5db;
+}
+
+.step.done {
+  opacity: 0.55;
+}
+
+.step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.step-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.step-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.step-tip {
+  font-size: 12px;
+  margin-top: 6px;
+  padding: 6px 10px;
+  border-left: 2px solid;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.step-check {
+  font-size: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+}
+
+.step-check.checked {
+  color: #22c55e;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .crm-wrap {
+    color: #e5e7eb;
+  }
+
+  .ptab {
+    background: #1f2937;
+    border-color: #374151;
+    color: #9ca3af;
+  }
+
+  .ptab:hover {
+    background: #374151;
+    border-color: #4b5563;
+  }
+
+  .ptab.active {
+    background: #1e3a5f;
+    color: #93c5fd;
+    border-color: #1d4ed8;
+  }
+
+  .progress-label {
+    color: #9ca3af;
+  }
+
+  .progress-bar {
+    background: #374151;
+  }
+
+  .phase-card {
+    background: #111827;
+    border-color: #374151;
+  }
+
+  .phase-header {
+    border-bottom-color: #374151;
+  }
+
+  .phase-title {
+    color: #f9fafb;
+  }
+
+  .phase-goal {
+    color: #9ca3af;
+  }
+
+  .step {
+    background: #1f2937;
+  }
+
+  .step:hover {
+    border-color: #4b5563;
+  }
+
+  .step-title {
+    color: #f9fafb;
+  }
+
+  .step-desc {
+    color: #9ca3af;
+  }
+
+  .step-check {
+    color: #6b7280;
+  }
+}

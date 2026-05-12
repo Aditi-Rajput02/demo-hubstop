@@ -1,0 +1,174 @@
+.app-shell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafb;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.app-logo {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.app-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  flex: 1;
+}
+
+/* ── Get Started button ── */
+.get-started-btn {
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #ff7a59;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.get-started-btn:hover {
+  background: #e8623e;
+}
+
+.get-started-btn:active {
+  transform: scale(0.97);
+}
+
+/* ── View toggle ── */
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.vtab {
+  padding: 5px 14px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.vtab:hover {
+  color: #374151;
+  background: #e5e7eb;
+}
+
+.vtab.active {
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ── Main content ── */
+.app-main {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  box-sizing: border-box;
+}
+
+/* Guide view: constrained width */
+.app-main:has(.crm-wrap) {
+  max-width: 780px;
+}
+
+/* ── Mermaid diagram ── */
+.mermaid-wrap {
+  width: 100%;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.mermaid-wrap svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid-loading {
+  text-align: center;
+  padding: 48px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.mermaid-error {
+  text-align: center;
+  padding: 48px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-shell {
+    background: #0f172a;
+  }
+
+  .app-header {
+    background: #111827;
+    border-bottom-color: #1f2937;
+  }
+
+  .app-title {
+    color: #f9fafb;
+  }
+
+  .view-toggle {
+    background: #1f2937;
+  }
+
+  .vtab {
+    color: #9ca3af;
+  }
+
+  .vtab:hover {
+    color: #e5e7eb;
+    background: #374151;
+  }
+
+  .vtab.active {
+    background: #374151;
+    color: #f9fafb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  .mermaid-wrap {
+    background: #111827;
+    border-color: #374151;
+  }
+}
