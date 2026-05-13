@@ -7,14 +7,16 @@ export default function HubSpotFormModal({ onClose }) {
   // Load the HubSpot embed script once
   useEffect(() => {
     const SCRIPT_ID = 'hs-form-script';
-    if (!document.getElementById(SCRIPT_ID)) {
-      const script = document.createElement('script');
-      script.id = SCRIPT_ID;
-      script.src = 'https://js-na2.hsforms.net/forms/embed/246153931.js';
-      script.defer = true;
-      document.body.appendChild(script);
-    }
+    // Remove old script if portal changed
+    const existing = document.getElementById(SCRIPT_ID);
+    if (existing) existing.remove();
+    const script = document.createElement('script');
+    script.id = SCRIPT_ID;
+    script.src = 'https://js-na2.hsforms.net/forms/embed/246164541.js';
+    script.defer = true;
+    document.body.appendChild(script);
   }, []);
+
 
   // Close on Escape key
   useEffect(() => {
@@ -54,8 +56,8 @@ export default function HubSpotFormModal({ onClose }) {
           <div
             className="hs-form-frame"
             data-region="na2"
-            data-form-id="8fce0770-d16d-4a1c-a3be-d46f0ae07c0b"
-            data-portal-id="246153931"
+            data-form-id="77fe130d-984b-4afb-b194-3d3213684e69"
+            data-portal-id="246164541"
           />
         </div>
       </div>
