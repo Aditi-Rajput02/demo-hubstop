@@ -94,6 +94,15 @@ export default function CrmGuide() {
           </div>
         </div>
 
+        {/* Alerts */}
+        {p.alerts && p.alerts.length > 0 && (
+          <div className="alerts">
+            {p.alerts.map((a, i) => (
+              <div key={i} className={`alert alert-${a.type}`} dangerouslySetInnerHTML={{ __html: a.text }} />
+            ))}
+          </div>
+        )}
+
         <div className="steps">
           {p.steps.map((s, i) => (
             <div

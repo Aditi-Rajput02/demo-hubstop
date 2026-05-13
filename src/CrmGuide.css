@@ -111,6 +111,52 @@
   margin-top: 2px;
 }
 
+/* ── Alerts ── */
+.alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.alert {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  border-left: 3px solid;
+}
+
+.alert-fix {
+  background: #FFF0F0;
+  border-color: #D93025;
+  color: #7A1A12;
+}
+
+.alert-warn {
+  background: #FFF8E6;
+  border-color: #E5A000;
+  color: #7A4F00;
+}
+
+.alert-info {
+  background: #E8F4FD;
+  border-color: #1A73E8;
+  color: #0D47A1;
+}
+
+.alert-good {
+  background: #E6F4EA;
+  border-color: #34A853;
+  color: #1B5E20;
+}
+
+.alert-new {
+  background: #F3E8FF;
+  border-color: #7C3AED;
+  color: #4C1D95;
+}
+
 /* ── Steps ── */
 .steps {
   display: flex;
